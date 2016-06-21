@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>js1</title>
+	<meta name="description" content="js1">
+	<meta name="author" content="SergeyGG">
+	<!--<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">-->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<script>
+function sequence(start, step) {
+	start = start || 0;
+	step = step || 1;
+	start -= step;
+	
+	return function() {
+		return start += step;
+	}
+}
+
+var generator = sequence(10, 3);
+var generator2 = sequence(7, 1);
+
+/*console*/
+console.log(generator()); // 10
+console.log(generator()); // 13
+
+console.log(generator2()); // 7
+
+console.log(generator()); // 16
+
+console.log(generator2()); // 8
+
+</script>
+
+</body> 
+</html>
