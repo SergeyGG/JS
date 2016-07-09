@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>iField</title>
+	<meta name="description" content="Field change color">
+	<meta name="author" content="SergeyGG">
+	<!--<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">-->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+
+
+<script>
+function tableCreate(){
+    var body = document.body,
+        tbl  = document.createElement('table');
+    
+    tbl.style.border = '1px solid black';
+    tbl.style.borderCollapse = "collapse";
+
+    for(var i = 0; i <= 10; i++){
+        var tr = tbl.insertRow();
+
+        for(var j = 0; j <= 10; j++){
+           
+                var td = tr.insertCell();
+                
+                td.style.border = '1px solid black';
+                td.style.width = '30px';
+                td.style.height = '30px';
+                td.style.background = 'green';
+                         
+        }
+    }
+
+    body.appendChild(tbl);
+}
+
+tableCreate();
+
+window.onload = function() {
+	var td = document.getElementsByTagName("td");
+	for (var i = 0; i < td.length; i++) {
+		td[i].onmousedown = changeColor;
+	}
+};
+
+function changeColor(event) {
+	console.log ('changeColor');
+	td.style.background = 'green';
+	return td.style.background;
+
+	//var target = event.target;
+	var cell = target.id;
+	
+
+
+
+}
+
+</script>
+
+</body> 
+</html>
+
