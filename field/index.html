@@ -50,15 +50,95 @@ window.onload = function() {
 	for (var i = 0; i < td.length; i++) {
 		td[i].onmousedown = changeColor;
 	}
+	
+	function changeColor(event) {
+	var td = event.target;
+	td.classList.remove("green");
+	td.classList.add("white");
+	}
+	
+	change.onclick = function replaceClass() {
+
+
+		var td = document.getElementsByTagName("td");
+		console.log (td);
+		for (var i = 0; i < td.length; i++) {
+			if (true) {}
+			td[i].classList.add("green");
+		}
+		
+		//console.log (td.classList.contains("green"));
+		/*if (td.classList.contains("green")) {
+td.classList.remove("green");
+	td.classList.add("white");
+		} */
+		/*else {
+			td.classList.remove("white");
+	td.classList.add("green");
+		}*/
+		
+		/* var green = document.getElementsByClassName("green");
+		for (var i = 0; i < green.length; i++) {
+			green[i].classList.add("white");
+		}*/
+		/* var white = document.getElementsByClassName("white");
+		console.log (white);
+		for (var i = 0; i < white.length; i++) {
+			white[i].classList.add("green");
+		}*/
+		
+		/*var green = document.getElementsByClassName("green");
+		for (var i = 0; i < green.length; i++) {
+			green[i].classList.add("white");
+		}*/
+		/*var white = document.getElementsByClassName("white");
+		console.log (white);
+		for (var i = 0; i < white.length; i++) {
+			white[i].classList.add("green");
+		}*/
+		
+		/*document.onclick = function replaceClass() {
+	var elements = document.getElementsByClassName("xxx");
+
+	if (elements[0]) {
+		elements[0].className = "yyy";
+		replaceClass();
+	}
+};*/
+
+/*var x = document.getElementsByClassName("white");
+	console.log(x);
+	for (var i = 0; i < x.length; i++) {
+			x[i].classList.remove("white");
+			x[i].classList.add("green");
+		}
+	
+	}
+
+
+	function white(){
+	var elements = document.getElementsByClassName("white");
+	if (elements[0]) {
+		elements[0].className = "green";
+		replaceClass();
+	} 
+}
+function green(){
+	var element = document.getElementsByClassName("green");
+	if (element[0]) {
+		element[0].className = "white";
+		replaceClass();
+	} 
+	}
+	white();
+	green();*/
+
+	
+	
+	
 };
 
-function changeColor(event) {
-	console.log ('changeColor');
-	
 
-
-
-}
 
 </script>
 
