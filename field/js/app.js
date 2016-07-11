@@ -31,14 +31,7 @@ window.onload = function() {
 	change.onclick = function replaceClass() {
 
 
-		var td = document.getElementsByTagName("td");
-		console.log (td);
-		for (var i = 0; i < td.length; i++) {
-			if (td[i].className == "white") {
-				td[i].className == "green";
-			}
-			
-		}
+		
 
 	}
   
