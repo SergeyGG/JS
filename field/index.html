@@ -6,8 +6,8 @@
 	<title>iField</title>
 	<meta name="description" content="Field change color">
 	<meta name="author" content="SergeyGG">
-	<!--<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/styles.css">-->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -15,132 +15,9 @@
 
 <body>
 
+<script src="js/app.js"></script>
 
-
-<script>
-function tableCreate(){
-    var body = document.body,
-        tbl  = document.createElement('table');
-    
-    tbl.style.border = '1px solid black';
-    tbl.style.borderCollapse = "collapse";
-
-    for(var i = 0; i <= 10; i++){
-        var tr = tbl.insertRow();
-
-        for(var j = 0; j <= 10; j++){
-           
-                var td = tr.insertCell();
-                
-                td.style.border = '1px solid black';
-                td.style.width = '30px';
-                td.style.height = '30px';
-                td.style.background = 'green';
-                         
-        }
-    }
-
-    body.appendChild(tbl);
-}
-
-tableCreate();
-
-window.onload = function() {
-	var td = document.getElementsByTagName("td");
-	for (var i = 0; i < td.length; i++) {
-		td[i].onmousedown = changeColor;
-	}
-	
-	function changeColor(event) {
-	var td = event.target;
-	td.classList.remove("green");
-	td.classList.add("white");
-	}
-	
-	change.onclick = function replaceClass() {
-
-
-		var td = document.getElementsByTagName("td");
-		console.log (td);
-		for (var i = 0; i < td.length; i++) {
-			if (true) {}
-			td[i].classList.add("green");
-		}
-		
-		//console.log (td.classList.contains("green"));
-		/*if (td.classList.contains("green")) {
-td.classList.remove("green");
-	td.classList.add("white");
-		} */
-		/*else {
-			td.classList.remove("white");
-	td.classList.add("green");
-		}*/
-		
-		/* var green = document.getElementsByClassName("green");
-		for (var i = 0; i < green.length; i++) {
-			green[i].classList.add("white");
-		}*/
-		/* var white = document.getElementsByClassName("white");
-		console.log (white);
-		for (var i = 0; i < white.length; i++) {
-			white[i].classList.add("green");
-		}*/
-		
-		/*var green = document.getElementsByClassName("green");
-		for (var i = 0; i < green.length; i++) {
-			green[i].classList.add("white");
-		}*/
-		/*var white = document.getElementsByClassName("white");
-		console.log (white);
-		for (var i = 0; i < white.length; i++) {
-			white[i].classList.add("green");
-		}*/
-		
-		/*document.onclick = function replaceClass() {
-	var elements = document.getElementsByClassName("xxx");
-
-	if (elements[0]) {
-		elements[0].className = "yyy";
-		replaceClass();
-	}
-};*/
-
-/*var x = document.getElementsByClassName("white");
-	console.log(x);
-	for (var i = 0; i < x.length; i++) {
-			x[i].classList.remove("white");
-			x[i].classList.add("green");
-		}
-	
-	}
-
-
-	function white(){
-	var elements = document.getElementsByClassName("white");
-	if (elements[0]) {
-		elements[0].className = "green";
-		replaceClass();
-	} 
-}
-function green(){
-	var element = document.getElementsByClassName("green");
-	if (element[0]) {
-		element[0].className = "white";
-		replaceClass();
-	} 
-	}
-	white();
-	green();*/
-
-	
-	
-	
-};
-
-
-
-</script>
+<input type="button" id="change" value="Change!">
 
 </body> 
 </html>
