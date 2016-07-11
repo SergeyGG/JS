@@ -29,7 +29,45 @@ window.onload = function() {
 	}
 
 	change.onclick = function replaceClass() {
+		
+	/*getElementsByClassName - javascript.ru/unsorted/top-10-functions#8-getelementsbyclass*/	
+		if(document.getElementsByClassName) {
 
+			getElementsByClass = function(classList, node) {    
+				return (node || document).getElementsByClassName(classList)
+			}
+
+		} else {
+
+			getElementsByClass = function(classList, node) {			
+				var node = node || document,
+				list = node.getElementsByTagName('*'), 
+				length = list.length,  
+				classArray = classList.split(/\s+/), 
+				classes = classArray.length, 
+				result = [], i,j
+				for(i = 0; i < length; i++) {
+					for(j = 0; j < classes; j++)  {
+						if(list[i].className.search('\\b' + classArray[j] + '\\b') != -1) {
+							result.push(list[i])
+							break
+						}
+					}
+				}
+	
+				return result
+			}
+		}
+
+		var elements = getElementsByClass('white');
+		for (var i=0; i<elements.length; i++)  {
+  			elements[i].className = elements[i].className.replace('white', 'green')
+		}
+
+		var elements = getElementsByClass('green');
+		for (var i=0; i<elements.length; i++)  {
+  			elements[i].className = elements[i].className.replace('green', 'white')
+		}
 
 		
 
